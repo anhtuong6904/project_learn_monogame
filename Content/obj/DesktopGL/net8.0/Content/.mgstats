@@ -1,1 +1,4 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"D:/tai_lieu_hoc/Game_Dev/DungeonSlime/Content/Images/atlas-definition.xml","D:\tai_lieu_hoc\Game_Dev\DungeonSlime\Content\bin\DesktopGL\Content\Images/atlas-definition.xml","CopyItem","File",276,276,0.001086
+"D:/tai_lieu_hoc/Game_Dev/DungeonSlime/Content/Images/atlas.png","D:/tai_lieu_hoc/Game_Dev/DungeonSlime/Content/bin/DesktopGL/Content/Images/atlas.xnb","TextureProcessor","Texture2DContent",590,16469,0.0848772
+"D:/tai_lieu_hoc/Game_Dev/DungeonSlime/Content/Images/logo.png","D:/tai_lieu_hoc/Game_Dev/DungeonSlime/Content/bin/DesktopGL/Content/Images/logo.xnb","TextureProcessor","Texture2DContent",16734,311381,0.1168191

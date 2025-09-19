@@ -27,7 +27,6 @@
     <PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.*" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="MonoGameLibrary\MonoGameLibrary.csproj" />
     <ProjectReference Include="..\MonoGameLibrary\MonoGameLibrary.csproj" />
   </ItemGroup>
   <Target Name="RestoreDotnetTools" BeforeTargets="CollectPackageReferences">

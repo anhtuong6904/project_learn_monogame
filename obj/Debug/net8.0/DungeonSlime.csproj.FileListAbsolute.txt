@@ -1,3 +1,6 @@
+D:\tai_lieu_hoc\Game_Dev\DungeonSlime\bin\Debug\net8.0\Content\Images\atlas-definition.xml
+D:\tai_lieu_hoc\Game_Dev\DungeonSlime\bin\Debug\net8.0\Content\Images\atlas.xnb
+D:\tai_lieu_hoc\Game_Dev\DungeonSlime\bin\Debug\net8.0\Content\Images\logo.xnb
 D:\tai_lieu_hoc\Game_Dev\DungeonSlime\bin\Debug\net8.0\DungeonSlime.exe
 D:\tai_lieu_hoc\Game_Dev\DungeonSlime\bin\Debug\net8.0\DungeonSlime.deps.json
 D:\tai_lieu_hoc\Game_Dev\DungeonSlime\bin\Debug\net8.0\DungeonSlime.runtimeconfig.json
@@ -18,17 +21,17 @@ D:\tai_lieu_hoc\Game_Dev\DungeonSlime\bin\Debug\net8.0\runtimes\win-x64\native\o
 D:\tai_lieu_hoc\Game_Dev\DungeonSlime\bin\Debug\net8.0\runtimes\linux-x64\native\libSDL2-2.0.so.0
 D:\tai_lieu_hoc\Game_Dev\DungeonSlime\bin\Debug\net8.0\runtimes\osx\native\libSDL2-2.0.0.dylib
 D:\tai_lieu_hoc\Game_Dev\DungeonSlime\bin\Debug\net8.0\runtimes\win-x64\native\SDL2.dll
+D:\tai_lieu_hoc\Game_Dev\DungeonSlime\bin\Debug\net8.0\MonoGameLibrary.dll
+D:\tai_lieu_hoc\Game_Dev\DungeonSlime\bin\Debug\net8.0\MonoGameLibrary.pdb
 D:\tai_lieu_hoc\Game_Dev\DungeonSlime\obj\Debug\net8.0\DungeonSlime.csproj.AssemblyReference.cache
 D:\tai_lieu_hoc\Game_Dev\DungeonSlime\obj\Debug\net8.0\DungeonSlime.GeneratedMSBuildEditorConfig.editorconfig
 D:\tai_lieu_hoc\Game_Dev\DungeonSlime\obj\Debug\net8.0\DungeonSlime.AssemblyInfoInputs.cache
 D:\tai_lieu_hoc\Game_Dev\DungeonSlime\obj\Debug\net8.0\DungeonSlime.AssemblyInfo.cs
 D:\tai_lieu_hoc\Game_Dev\DungeonSlime\obj\Debug\net8.0\DungeonSlime.csproj.CoreCompileInputs.cache
+D:\tai_lieu_hoc\Game_Dev\DungeonSlime\obj\Debug\net8.0\DungeonSlime.sourcelink.json
 D:\tai_lieu_hoc\Game_Dev\DungeonSlime\obj\Debug\net8.0\DungeonS.106F46AA.Up2Date
 D:\tai_lieu_hoc\Game_Dev\DungeonSlime\obj\Debug\net8.0\DungeonSlime.dll
 D:\tai_lieu_hoc\Game_Dev\DungeonSlime\obj\Debug\net8.0\refint\DungeonSlime.dll
 D:\tai_lieu_hoc\Game_Dev\DungeonSlime\obj\Debug\net8.0\DungeonSlime.pdb
 D:\tai_lieu_hoc\Game_Dev\DungeonSlime\obj\Debug\net8.0\DungeonSlime.genruntimeconfig.cache
 D:\tai_lieu_hoc\Game_Dev\DungeonSlime\obj\Debug\net8.0\ref\DungeonSlime.dll
-D:\tai_lieu_hoc\Game_Dev\DungeonSlime\obj\Debug\net8.0\DungeonSlime.sourcelink.json
-D:\tai_lieu_hoc\Game_Dev\DungeonSlime\bin\Debug\net8.0\MonoGameLibrary.dll
-D:\tai_lieu_hoc\Game_Dev\DungeonSlime\bin\Debug\net8.0\MonoGameLibrary.pdb

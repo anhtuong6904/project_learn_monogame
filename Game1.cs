@@ -13,6 +13,10 @@ public class Game1 : Core
     private AnimatedSprite _slime;
     private AnimatedSprite _bat;
 
+    private Vector2 _slimePosition;
+    private const float MOVEMENT_SPEED = 5.0f;
+
+
     public Game1() : base("Dungeon Slime", 1280, 720, false)
     {
 
@@ -44,8 +48,42 @@ public class Game1 : Core
         // TODO: Add your update logic here
         _bat.update(gameTime);
         _slime.update(gameTime);
-
+        CheckKeyboardInput();
+        
         base.Update(gameTime);
+    }
+
+    private void CheckKeyboardInput()
+    {
+        KeyboardState keyboardState = Keyboard.GetState();
+
+        float speed = MOVEMENT_SPEED;
+
+        if (keyboardState.IsKeyDown(Keys.Space))
+        {
+            speed *= 1.5f;
+        }
+
+        if (keyboardState.IsKeyDown(Keys.W) || keyboardState.IsKeyDown(Keys.Up))
+        {
+            _slimePosition.Y -= speed;
+        }
+
+        if (keyboardState.IsKeyDown(Keys.A) || keyboardState.IsKeyDown(Keys.Left))
+        {
+            _slimePosition.X -= speed;
+        }
+
+        if (keyboardState.IsKeyDown(Keys.S) || keyboardState.IsKeyDown(Keys.Down))
+        {
+            _slimePosition.Y += speed;
+        }
+
+        if (keyboardState.IsKeyDown(Keys.D) || keyboardState.IsKeyDown(Keys.Right))
+        {
+            _slimePosition.X += speed;
+        }
+
     }
 
     protected override void Draw(GameTime gameTime)
@@ -55,7 +93,8 @@ public class Game1 : Core
 
         // Begin the sprite batch to prepare for rendering.
         SpriteBatch.Begin(samplerState: SamplerState.PointClamp);
-        _slime.Draw(SpriteBatch, Vector2.Zero);
+        // render _slime
+        _slime.Draw(SpriteBatch, _slimePosition);
         _bat.Draw(SpriteBatch, new Vector2(_slime.Width + 10.0f, 0));
         SpriteBatch.End();
 

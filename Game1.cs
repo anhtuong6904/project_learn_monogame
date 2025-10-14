@@ -17,7 +17,10 @@ public class Game1 : Core
     private Vector2 _slimePosition;
     private Vector2 _batPosition;
     private Vector2 _batVelocity;
+    private Tilemap _tilemap;
     private const float MOVEMENT_SPEED = 5.0f;
+
+    private Rectangle _roomBounds;
 
 
     public Game1() : base("Dungeon Slime", 1280, 720, false)
@@ -28,27 +31,40 @@ public class Game1 : Core
     protected override void Initialize()
     {
         base.Initialize();
-        // TODO: Add your initialization logic here
-        _batPosition = new Vector2(_slime.Width + 10, 0);
+
+        Rectangle ScreenBounds = GraphicsDevice.PresentationParameters.Bounds;
+        _roomBounds = new Rectangle(
+            (int)_tilemap.tileWidth,
+            (int)_tilemap.tileHeight,
+            (int)ScreenBounds.Width - (int)_tilemap.tileWidth * 2,
+            (int)ScreenBounds.Height - (int)_tilemap.tileHeight * 2
+
+        );
+        //set slimeposition
+        int centerColumn = (int)_tilemap.Columns / 2;
+        int centerRow = (int)_tilemap.Rows / 2;
+
+        _slimePosition = new Vector2(centerColumn * (int)_tilemap.tileWidth, centerRow * (int)_tilemap.tileHeight);
+
+        _batPosition = new Vector2(_roomBounds.Left, _roomBounds.Top );
         AssignRadomBatVelocity();
     }
 
     protected override void LoadContent()
     {
         TextureAtlas atlas = TextureAtlas.FromFile(Content, "images/atlas-definition.xml");
-
+        
         _slime = atlas.CreateAnimatedSprite("slime-animation");
         _bat = atlas.CreateAnimatedSprite("bat-animation");
 
         _slime._scale = new Vector2(4.0f, 4.0f);
-        _bat._scale = new Vector2( 4.0f, 4.0f); 
+        _bat._scale = new Vector2(4.0f, 4.0f);
+        _tilemap = Tilemap.FromFile(Content, "images/tilemap-definition.xml");
+        _tilemap.Scale = new Vector2(4.0f, 4.0f);
     }
 
     protected override void Update(GameTime gameTime)
     {
-
-
-
         // TODO: Add your update logic here
         //update animation sprite
         _slime.update(gameTime);
@@ -57,13 +73,6 @@ public class Game1 : Core
         //kiem tra dau vao cua ban phim truoc khi thuc hien 
         CheckKeyboardInput();
 
-        Rectangle ScreenBounds = new Rectangle(
-            0,
-            0,
-            GraphicsDevice.PresentationParameters.BackBufferWidth,
-            GraphicsDevice.PresentationParameters.BackBufferHeight
-        );
-
         Circle slimeBounds = new Circle(
             (int)(_slimePosition.X + (_slime.Width * 0.5f)),
             (int)(_slimePosition.Y + (_slime.Height * 0.5f)),
@@ -71,21 +80,21 @@ public class Game1 : Core
         );
         
 
-        if (slimeBounds.Left < ScreenBounds.Left)
+        if (slimeBounds.Left < _roomBounds.Left)
         {
-            _slimePosition.X = ScreenBounds.Left;
+            _slimePosition.X = _roomBounds.Left;
         }
-        else if (slimeBounds.Right > ScreenBounds.Right)
+        else if (slimeBounds.Right > _roomBounds.Right)
         {
-            _slimePosition.X = ScreenBounds.Right - _slime.Width;
+            _slimePosition.X = _roomBounds.Right - _slime.Width;
         }
-        if (slimeBounds.Top < ScreenBounds.Top)
+        if (slimeBounds.Top < _roomBounds.Top)
         {
-            _slimePosition.Y = ScreenBounds.Top;
+            _slimePosition.Y = _roomBounds.Top;
         }
-        else if (slimeBounds.Bottom > ScreenBounds.Bottom)
+        else if (slimeBounds.Bottom > _roomBounds.Bottom)
         {
-            _slimePosition.Y = ScreenBounds.Bottom - _slime.Height;
+            _slimePosition.Y = _roomBounds.Bottom - _slime.Height;
         }
         Vector2 newBatPosition = _batPosition + _batVelocity;
 
@@ -96,25 +105,25 @@ public class Game1 : Core
         );
         
         Vector2 Normal = Vector2.Zero;
-        if (batBounds.Left < ScreenBounds.Left)
+        if (batBounds.Left < _roomBounds.Left)
         {
             Normal.X = Vector2.UnitX.X;
-            _batPosition.X = ScreenBounds.Left;
+            _batPosition.X = _roomBounds.Left;
         }
-        else if (batBounds.Right > ScreenBounds.Right)
+        else if (batBounds.Right > _roomBounds.Right)
         {
             Normal.X = -Vector2.UnitX.X;
-            _batPosition.X = ScreenBounds.Right - _bat.Width;
+            _batPosition.X = _roomBounds.Right - _bat.Width;
         }
-        if (batBounds.Top < ScreenBounds.Top)
+        if (batBounds.Top < _roomBounds.Top)
         {
             Normal.Y = Vector2.UnitY.Y;
-            _batPosition.Y = ScreenBounds.Top;
+            _batPosition.Y = _roomBounds.Top;
         }
-        else if (batBounds.Bottom > ScreenBounds.Bottom)
+        else if (batBounds.Bottom > _roomBounds.Bottom)
         {
             Normal.Y = -Vector2.UnitY.Y;
-            _batPosition.Y = ScreenBounds.Bottom - _bat.Height;
+            _batPosition.Y = _roomBounds.Bottom - _bat.Height;
         }
         if (Normal != Vector2.Zero)
         {
@@ -126,11 +135,10 @@ public class Game1 : Core
         {
             // tinh tong so o tren mang hinh
 
-            int totalColumns = GraphicsDevice.PresentationParameters.BackBufferWidth / (int)(_bat.Width);
-            int totalRows = GraphicsDevice.PresentationParameters.BackBufferHeight / (int)(_bat.Height);
+            
 
-            int Column = Random.Shared.Next(0, totalColumns);
-            int Row = Random.Shared.Next(0, totalRows);
+            int Column = Random.Shared.Next(1, _tilemap.Columns - 2);
+            int Row = Random.Shared.Next(1, _tilemap.Rows - 2);
 
             _batPosition = new Vector2(Column * _bat.Width, Row * _bat.Height);
             AssignRadomBatVelocity();
@@ -193,8 +201,8 @@ public class Game1 : Core
         // Begin the sprite batch to prepare for rendering.
         SpriteBatch.Begin(samplerState: SamplerState.PointClamp);
         // render _slime
+        _tilemap.Draw(SpriteBatch);
         _slime.Draw(SpriteBatch, _slimePosition);
-
         _bat.Draw(SpriteBatch, _batPosition);
         SpriteBatch.End();
 

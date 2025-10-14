@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SourceFile>d:/tai_lieu_hoc/Game_Dev/DungeonSlime/Content/Images/tilemap-definition.xml</SourceFile>
+  <SourceTime>2025-06-02T17:42:50+07:00</SourceTime>
+  <DestFile>d:/tai_lieu_hoc/Game_Dev/DungeonSlime/Content/bin/DesktopGL/Images/tilemap-definition.xnb</DestFile>
+  <DestTime>2025-10-14T21:00:23.8802336+07:00</DestTime>
+  <Importer>XmlImporter</Importer>
+  <ImporterTime>2025-06-02T17:31:02+07:00</ImporterTime>
+  <Processor>PassThroughProcessor</Processor>
+  <ProcessorTime>2025-06-02T17:31:02+07:00</ProcessorTime>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>

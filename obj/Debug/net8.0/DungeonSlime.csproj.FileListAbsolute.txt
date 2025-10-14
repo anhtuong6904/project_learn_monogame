@@ -35,3 +35,4 @@ D:\tai_lieu_hoc\Game_Dev\DungeonSlime\obj\Debug\net8.0\refint\DungeonSlime.dll
 D:\tai_lieu_hoc\Game_Dev\DungeonSlime\obj\Debug\net8.0\DungeonSlime.pdb
 D:\tai_lieu_hoc\Game_Dev\DungeonSlime\obj\Debug\net8.0\DungeonSlime.genruntimeconfig.cache
 D:\tai_lieu_hoc\Game_Dev\DungeonSlime\obj\Debug\net8.0\ref\DungeonSlime.dll
+D:\tai_lieu_hoc\Game_Dev\DungeonSlime\bin\Debug\net8.0\Content\Images\tilemap-definition.xml

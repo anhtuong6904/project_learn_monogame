@@ -40,3 +40,6 @@
 /processorParam:TextureFormat=Color
 /build:Images/logo.png
 
+#begin Images/tilemap-definition.xml
+/copy:Images/tilemap-definition.xml
+

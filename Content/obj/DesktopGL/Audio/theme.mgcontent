@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SourceFile>d:/tai_lieu_hoc/Game_Dev/DungeonSlime/Content/Audio/theme.ogg</SourceFile>
+  <SourceTime>2025-10-19T16:44:21.5887512+07:00</SourceTime>
+  <DestFile>d:/tai_lieu_hoc/Game_Dev/DungeonSlime/Content/bin/DesktopGL/Audio/theme.xnb</DestFile>
+  <DestTime>2025-10-19T16:48:57.7990767+07:00</DestTime>
+  <Importer>OggImporter</Importer>
+  <ImporterTime>2025-06-02T17:31:02+07:00</ImporterTime>
+  <Processor>SongProcessor</Processor>
+  <ProcessorTime>2025-06-02T17:31:02+07:00</ProcessorTime>
+  <Parameters>
+    <Key>Quality</Key>
+    <Value>Best</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput>
+    <string>d:/tai_lieu_hoc/Game_Dev/DungeonSlime/Content/bin/DesktopGL/Audio/theme.ogg</string>
+  </BuildOutput>
+</PipelineBuildEvent>

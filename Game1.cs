@@ -2,6 +2,8 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Audio;
+using Microsoft.Xna.Framework.Media;
 using MonoGameLibrary;
 using MonoGameLibrary.Graphics;
 using MonoGameLibrary.Input;
@@ -13,6 +15,9 @@ public class Game1 : Core
     //khoi tao cac Sprite
 
     private AnimatedSprite _slime;
+    private SoundEffect BounceEffect;
+    private SoundEffect CollectEffect;
+    private Song _themeSong;
     private AnimatedSprite _bat;
     private Vector2 _slimePosition;
     private Vector2 _batPosition;
@@ -40,18 +45,27 @@ public class Game1 : Core
             (int)ScreenBounds.Height - (int)_tilemap.tileHeight * 2
 
         );
-        //set slimeposition
+        //set slime position
         int centerColumn = (int)_tilemap.Columns / 2;
         int centerRow = (int)_tilemap.Rows / 2;
 
         _slimePosition = new Vector2(centerColumn * (int)_tilemap.tileWidth, centerRow * (int)_tilemap.tileHeight);
-
-        _batPosition = new Vector2(_roomBounds.Left, _roomBounds.Top );
+        //set bat posittion
+        _batPosition = new Vector2(_roomBounds.Left, _roomBounds.Top);
+        //tao vector di chuyen cho bat
         AssignRadomBatVelocity();
+        Audio.PlaySong(_themeSong);
     }
 
     protected override void LoadContent()
     {
+        //load audio
+        BounceEffect = Content.Load<SoundEffect>("Audio/bounce");
+        CollectEffect = Content.Load<SoundEffect>("Audio/collect");
+        _themeSong = Content.Load<Song>("Audio/theme");
+
+        
+        // load do hoa
         TextureAtlas atlas = TextureAtlas.FromFile(Content, "images/atlas-definition.xml");
         
         _slime = atlas.CreateAnimatedSprite("slime-animation");
@@ -83,18 +97,22 @@ public class Game1 : Core
         if (slimeBounds.Left < _roomBounds.Left)
         {
             _slimePosition.X = _roomBounds.Left;
+            Audio.PlaySoundEffect(BounceEffect);
         }
         else if (slimeBounds.Right > _roomBounds.Right)
         {
             _slimePosition.X = _roomBounds.Right - _slime.Width;
+            Audio.PlaySoundEffect(BounceEffect);
         }
         if (slimeBounds.Top < _roomBounds.Top)
         {
             _slimePosition.Y = _roomBounds.Top;
+            Audio.PlaySoundEffect(BounceEffect);
         }
         else if (slimeBounds.Bottom > _roomBounds.Bottom)
         {
             _slimePosition.Y = _roomBounds.Bottom - _slime.Height;
+            Audio.PlaySoundEffect(BounceEffect);
         }
         Vector2 newBatPosition = _batPosition + _batVelocity;
 
@@ -129,18 +147,19 @@ public class Game1 : Core
         {
             Normal.Normalize();
             _batVelocity = Vector2.Reflect(_batVelocity, Normal);
+            Audio.PlaySoundEffect(BounceEffect);
         }
         _batPosition = newBatPosition;
         if (slimeBounds.Intersects(batBounds))
         {
             // tinh tong so o tren mang hinh
 
-            
-
             int Column = Random.Shared.Next(1, _tilemap.Columns - 2);
             int Row = Random.Shared.Next(1, _tilemap.Rows - 2);
 
             _batPosition = new Vector2(Column * _bat.Width, Row * _bat.Height);
+            // phat SE Collect
+            Audio.PlaySoundEffect(CollectEffect);
             AssignRadomBatVelocity();
         }
 
@@ -189,6 +208,21 @@ public class Game1 : Core
         if (Input.Keyboard.IsKeyDown(Keys.D) || Input.Keyboard.IsKeyDown(Keys.Right))
         {
             _slimePosition.X += speed;
+        }
+
+        if (Input.Keyboard.WasKeyPressed(Keys.OemMinus))
+        {
+            Audio.SoundEffectVolume -= 0.1f;
+            Audio.SongVolume -= 0.1f;
+        }
+        if (Input.Keyboard.WasKeyPressed(Keys.OemPlus))
+        {
+            Audio.SoundEffectVolume += 0.1f;
+            Audio.SongVolume += 0.1f;
+        }
+        if (Input.Keyboard.WasKeyPressed(Keys.M))
+        {
+            Audio.ToggleMute();
         }
 
     }

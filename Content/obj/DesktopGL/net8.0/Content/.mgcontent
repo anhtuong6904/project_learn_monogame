@@ -7,10 +7,16 @@
     <File>D:/tai_lieu_hoc/Game_Dev/DungeonSlime/Content/Audio/bounce.wav</File>
     <File>D:/tai_lieu_hoc/Game_Dev/DungeonSlime/Content/Audio/collect.wav</File>
     <File>D:/tai_lieu_hoc/Game_Dev/DungeonSlime/Content/Audio/theme.ogg</File>
+    <File>D:/tai_lieu_hoc/Game_Dev/DungeonSlime/Content/Font/04B_30_5x.spritefont</File>
+    <File>D:/tai_lieu_hoc/Game_Dev/DungeonSlime/Content/Font/04B_30.spritefont</File>
+    <File>D:/tai_lieu_hoc/Game_Dev/DungeonSlime/Content/Font/File.spritefont</File>
     <File>D:/tai_lieu_hoc/Game_Dev/DungeonSlime/Content/Images/atlas.png</File>
     <File>D:/tai_lieu_hoc/Game_Dev/DungeonSlime/Content/Images/logo.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

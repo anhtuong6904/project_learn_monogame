@@ -40,3 +40,6 @@ D:\tai_lieu_hoc\Game_Dev\DungeonSlime\bin\Debug\net8.0\Content\Audio\bounce.xnb
 D:\tai_lieu_hoc\Game_Dev\DungeonSlime\bin\Debug\net8.0\Content\Audio\collect.xnb
 D:\tai_lieu_hoc\Game_Dev\DungeonSlime\bin\Debug\net8.0\Content\Audio\theme.ogg
 D:\tai_lieu_hoc\Game_Dev\DungeonSlime\bin\Debug\net8.0\Content\Audio\theme.xnb
+D:\tai_lieu_hoc\Game_Dev\DungeonSlime\bin\Debug\net8.0\Content\Font\File.xnb
+D:\tai_lieu_hoc\Game_Dev\DungeonSlime\bin\Debug\net8.0\Content\Font\04B_30.xnb
+D:\tai_lieu_hoc\Game_Dev\DungeonSlime\bin\Debug\net8.0\Content\Font\04B_30_5x.xnb

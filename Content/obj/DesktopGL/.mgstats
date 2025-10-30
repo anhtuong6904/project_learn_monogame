@@ -1,8 +1,11 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"d:/tai_lieu_hoc/Game_Dev/DungeonSlime/Content/Audio/bounce.wav","d:/tai_lieu_hoc/Game_Dev/DungeonSlime/Content/bin/DesktopGL/Audio/bounce.xnb","SoundEffectProcessor","SoundEffectContent",50664,50725,1.0824862
-"d:/tai_lieu_hoc/Game_Dev/DungeonSlime/Content/Audio/collect.wav","d:/tai_lieu_hoc/Game_Dev/DungeonSlime/Content/bin/DesktopGL/Audio/collect.xnb","SoundEffectProcessor","SoundEffectContent",22092,22153,0.0882725
-"d:/tai_lieu_hoc/Game_Dev/DungeonSlime/Content/Audio/theme.ogg","d:/tai_lieu_hoc/Game_Dev/DungeonSlime/Content/bin/DesktopGL/Audio/theme.xnb","SongProcessor","SongContent",1079706,123,0.4911249
-"d:/tai_lieu_hoc/Game_Dev/DungeonSlime/Content/Images/atlas-definition.xml","d:\tai_lieu_hoc\Game_Dev\DungeonSlime\Content\bin\DesktopGL\Images/atlas-definition.xml","CopyItem","File",913,913,0.0011297
-"d:/tai_lieu_hoc/Game_Dev/DungeonSlime/Content/Images/atlas.png","d:/tai_lieu_hoc/Game_Dev/DungeonSlime/Content/bin/DesktopGL/Images/atlas.xnb","TextureProcessor","Texture2DContent",1844,65621,0.0818627
-"d:/tai_lieu_hoc/Game_Dev/DungeonSlime/Content/Images/logo.png","d:/tai_lieu_hoc/Game_Dev/DungeonSlime/Content/bin/DesktopGL/Images/logo.xnb","TextureProcessor","Texture2DContent",16734,311381,0.0195747
-"d:/tai_lieu_hoc/Game_Dev/DungeonSlime/Content/Images/tilemap-definition.xml","d:\tai_lieu_hoc\Game_Dev\DungeonSlime\Content\bin\DesktopGL\Images/tilemap-definition.xml","CopyItem","File",694,694,0.0026763
+"d:/tai_lieu_hoc/Game_Dev/DungeonSlime/Content/Audio/bounce.wav","d:/tai_lieu_hoc/Game_Dev/DungeonSlime/Content/bin/DesktopGL/Audio/bounce.xnb","SoundEffectProcessor","SoundEffectContent",50664,50725,0.1573215
+"d:/tai_lieu_hoc/Game_Dev/DungeonSlime/Content/Audio/collect.wav","d:/tai_lieu_hoc/Game_Dev/DungeonSlime/Content/bin/DesktopGL/Audio/collect.xnb","SoundEffectProcessor","SoundEffectContent",22092,22153,0.0823028
+"d:/tai_lieu_hoc/Game_Dev/DungeonSlime/Content/Audio/theme.ogg","d:/tai_lieu_hoc/Game_Dev/DungeonSlime/Content/bin/DesktopGL/Audio/theme.xnb","SongProcessor","SongContent",1079706,123,0.4803015
+"d:/tai_lieu_hoc/Game_Dev/DungeonSlime/Content/Font/04B_30_5x.spritefont","d:/tai_lieu_hoc/Game_Dev/DungeonSlime/Content/bin/DesktopGL/Font/04B_30_5x.xnb","FontDescriptionProcessor","SpriteFontContent",500,1053721,0.2033545
+"d:/tai_lieu_hoc/Game_Dev/DungeonSlime/Content/Font/04B_30.spritefont","d:/tai_lieu_hoc/Game_Dev/DungeonSlime/Content/bin/DesktopGL/Font/04B_30.xnb","FontDescriptionProcessor","SpriteFontContent",500,70681,0.0263045
+"d:/tai_lieu_hoc/Game_Dev/DungeonSlime/Content/Font/File.spritefont","d:/tai_lieu_hoc/Game_Dev/DungeonSlime/Content/bin/DesktopGL/Font/File.xnb","FontDescriptionProcessor","SpriteFontContent",2075,70681,0.020417
+"d:/tai_lieu_hoc/Game_Dev/DungeonSlime/Content/Images/atlas-definition.xml","d:\tai_lieu_hoc\Game_Dev\DungeonSlime\Content\bin\DesktopGL\Images/atlas-definition.xml","CopyItem","File",913,913,0.0010392
+"d:/tai_lieu_hoc/Game_Dev/DungeonSlime/Content/Images/atlas.png","d:/tai_lieu_hoc/Game_Dev/DungeonSlime/Content/bin/DesktopGL/Images/atlas.xnb","TextureProcessor","Texture2DContent",1844,65621,0.0123672
+"d:/tai_lieu_hoc/Game_Dev/DungeonSlime/Content/Images/logo.png","d:/tai_lieu_hoc/Game_Dev/DungeonSlime/Content/bin/DesktopGL/Images/logo.xnb","TextureProcessor","Texture2DContent",16734,311381,0.0084097
+"d:/tai_lieu_hoc/Game_Dev/DungeonSlime/Content/Images/tilemap-definition.xml","d:\tai_lieu_hoc\Game_Dev\DungeonSlime\Content\bin\DesktopGL\Images/tilemap-definition.xml","CopyItem","File",694,694,0.0006052
